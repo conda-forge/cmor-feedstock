@@ -10,35 +10,34 @@ source:
     sha256: 115cbcd3baaa15262c5a6b6a38ed68149618be366301fb2dee5681b5aeb8f96a
 
 build:
-  number: 0
-  skip: True  # [win or py3k] 
+  number: 1
+  skip: True  # [win or py3k]
 
- 
+
 requirements:
   build:
+    - {{ pin_compatible('numpy') }}
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+  host:
     - {{ compiler('c') }}
   host:
     - ossuuid 1.6.*
     - udunits2
-    - python <3
+    - python
     - setuptools
-    - numpy 1.11.*
-    - hdf5 1.10.*
-    - libnetcdf 4.4.*
-    - gcc
-    - libgcc
+    - {{ pin_compatible('numpy') }}
+    - hdf5
+    - libnetcdf
   run:
-    - python {{ python }}
+    - python    python }}
     - ossuuid >=1.6
     - udunits2
-    - {{ pin_compatible('numpy') }}
     - cdms2
-    - gcc
-    - libgcc
 
 test:
   commands:
-      - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cmor"  
+      - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cmor"
 
 about:
     home:  https://cmor.llnl.gov/
