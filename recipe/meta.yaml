@@ -1,5 +1,5 @@
 {% set name = "cmor" %}
-{% set version = "3.3.2" %}
+{% set version = "3.3.3" %}
 
 package:
     name: {{ name }}
@@ -7,12 +7,11 @@ package:
 
 source:
     url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
-    sha256: 115cbcd3baaa15262c5a6b6a38ed68149618be366301fb2dee5681b5aeb8f96a
+    sha256: 008e8aafc6a6178f50a5396111cb395b9db929ce4a90d28309e45f0969bca803
 
 build:
-  number: 1
-  skip: True  # [win or py3k]
-
+  number: 3
+  skip: True  # [win or py3k] 
 
 requirements:
   build:
@@ -20,20 +19,23 @@ requirements:
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
   host:
-    - {{ compiler('c') }}
-  host:
     - ossuuid 1.6.*
     - udunits2
     - python
     - setuptools
-    - {{ pin_compatible('numpy') }}
     - hdf5
     - libnetcdf
+    - numpy
+    - libnetcdf >4.5
+    - cdms2 >=3.0.1
   run:
     - python    python }}
     - ossuuid >=1.6
     - udunits2
     - cdms2
+    - {{ pin_compatible('numpy') }}
+    - libnetcdf >4.5
+    - cdms2 >=3.0.1
 
 test:
   commands:

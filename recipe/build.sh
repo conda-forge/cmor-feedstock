@@ -1,3 +1,8 @@
+if [[ `uname` == "Linux" ]]; then
+    export LDSHARED_FLAGS="-shared -pthread"
+else
+    export LDSHARED_FLAGS="-bundle -undefined dynamic_lookup"
+fi
 
 ./configure \
     --with-python=${PREFIX}   \
