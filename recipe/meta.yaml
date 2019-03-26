@@ -10,35 +10,35 @@ source:
     sha256: e700a6d50f435e6ffdedf23bf6832b7d37fe21dc78815e1372f218d1d52bd2cb
 
 build:
-  number: 2
-  skip: True  # [win or py3k] 
+  number: 3
+  skip: True  # [win or py3k]
 
- 
+
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
   host:
     - python {{ python }}
-    - ossuuid 1.6.2
+    - libuuid
     - udunits2
-    - hdf5
+    - hdf5=>1.10.4
     - libnetcdf
     - numpy
     - setuptools
-    - cdms2
+    - cdms2=>3.1.2
   run:
     - python {{ python }}
-    - ossuuid 1.6.2
+    - libuuid
     - udunits2
     - {{ pin_compatible('numpy') }}
     - {{ pin_compatible('hdf5') }}
     - {{ pin_compatible('libnetcdf') }}
-    - cdms2
+    - cdms2=>3.1.2
 
 test:
   commands:
-      - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cmor"  
+      - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cmor"
 
 about:
     home:  https://cmor.llnl.gov/
@@ -56,6 +56,7 @@ about:
         common format required by the MIPs. The adoption of CMOR as a standard code for exchanging
         climate data will facilitate participation in MIPs because after learning how to satisfy
         the output requirements of one MIP, it will be easy to prepare output for other MIPs.
+    dev_url: https://github.com/PCMDI/cmor
 
 extra:
   recipe-maintainers:
