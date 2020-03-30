@@ -1,13 +1,13 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '7'
+- '9'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
-docker_image:
-- condaforge/linux-anvil-comp7
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
@@ -17,9 +17,13 @@ hdf5:
 json_c:
 - '0.13'
 libnetcdf:
-- 4.7.3
+- 4.7.4
 libuuid:
 - 2.32.1
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
 numpy:
 - '1.14'
 openblas:
@@ -27,8 +31,6 @@ openblas:
 pin_run_as_build:
   json-c:
     max_pin: x.x
-  libnetcdf:
-    max_pin: x.x.x
   libuuid:
     max_pin: x
   openblas:
@@ -37,4 +39,4 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- '2.7'
+- 3.7.* *_cpython
