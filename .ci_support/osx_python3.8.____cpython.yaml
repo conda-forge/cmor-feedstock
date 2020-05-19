@@ -17,7 +17,7 @@ hdf5:
 json_c:
 - '0.13'
 libnetcdf:
-- 4.7.3
+- 4.7.4
 libuuid:
 - 2.32.1
 macos_machine:
@@ -31,8 +31,6 @@ openblas:
 pin_run_as_build:
   json-c:
     max_pin: x.x
-  libnetcdf:
-    max_pin: x.x.x
   libuuid:
     max_pin: x
   openblas:
@@ -41,4 +39,4 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- '3.6'
+- 3.8.* *_cpython
