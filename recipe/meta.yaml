@@ -34,8 +34,6 @@ requirements:
     - libuuid
     - udunits2
     - {{ pin_compatible('numpy') }}
-    - hdf5
-    - libnetcdf
     - netcdf4
     - six
     - json-c
