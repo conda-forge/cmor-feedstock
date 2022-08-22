@@ -19,6 +19,7 @@ requirements:
     - make   # [unix]
   host:
     - python
+    - pip
     - setuptools
     - libuuid
     - udunits2
