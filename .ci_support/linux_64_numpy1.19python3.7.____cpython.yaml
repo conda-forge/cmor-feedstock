@@ -18,8 +18,6 @@ hdf5:
 - 1.12.2
 json_c:
 - '0.16'
-libnetcdf:
-- 4.8.1
 libuuid:
 - '2'
 numpy:

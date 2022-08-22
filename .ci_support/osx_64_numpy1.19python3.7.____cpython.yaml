@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '13'
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -16,8 +16,6 @@ hdf5:
 - 1.12.2
 json_c:
 - '0.16'
-libnetcdf:
-- 4.8.1
 libuuid:
 - '2'
 macos_machine:
