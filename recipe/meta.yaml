@@ -1,4 +1,4 @@
-{% set version = "3.6.1" %}
+{% set version = "3.7.0" %}
 
 package:
   name: cmor
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/PCMDI/cmor/archive/{{ version }}.tar.gz
-  sha256: 991035a41424f72ea6f0f85653fc13730eb035e63c7dff6ca740aa7a70976fb4
+  sha256: 2f9fa46122cb9aea0616a0343d6ea4df4e3cf80aac176c045668923d329c5939
 
 build:
-  number: 6
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -47,7 +47,7 @@ test:
 
 about:
   home: https://cmor.llnl.gov/
-  license: BSD-2-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: “Climate Model Output Rewriter” is a C library, with  Fortran 90 and Python bindings. CMOR is used to produce CF-compliant[3] netCDF[4] files. The structure of the files created by CMOR and the metadata they contain fulfill the requirements of many of the climate community’s standard model experiments (which are
     referred to here as “MIPs”[5] and include, for example, AMIP, PMIP, APE, and IPCC [DN1] scenario runs).

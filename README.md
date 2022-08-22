@@ -3,7 +3,7 @@ About cmor
 
 Home: https://cmor.llnl.gov/
 
-Package license: BSD-2-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmor-feedstock/blob/main/LICENSE.txt)
 
