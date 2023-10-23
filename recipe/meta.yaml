@@ -25,6 +25,8 @@ requirements:
     - udunits2
     - numpy
     - hdf5
+    # list this twice so conda-smithy does the pins right
+    - libnetcdf
     - libnetcdf * nompi_*
     - netcdf4
     - six
