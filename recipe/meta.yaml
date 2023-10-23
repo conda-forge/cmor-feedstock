@@ -9,7 +9,7 @@ source:
   sha256: fff8b0206c5ddf4436d67fb1766639429ed471bc270002999aaa17d721343f6b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -32,15 +32,9 @@ requirements:
     - openblas
   run:
     - python
-    - libuuid
-    - udunits2
     - {{ pin_compatible('numpy') }}
-    - hdf5
-    - libnetcdf
     - netcdf4
     - six
-    - json-c
-    - openblas
 
 test:
   commands:
