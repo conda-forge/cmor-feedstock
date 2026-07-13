@@ -13,7 +13,8 @@ source:
 
 build:
   number: 1
-  skip: win
+  # we have to drop python 3.10 because netcdf4 has already dropped it
+  skip: win or match(python, "<3.11")
 
 requirements:
   build:
