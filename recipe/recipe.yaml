@@ -12,8 +12,9 @@ source:
   sha256: 1bb4a80b27710dd9b72f1cdae671e22f2db6631526feadb3d87a6e30e613fd32
 
 build:
-  number: 0
-  skip: win
+  number: 1
+  # we have to drop python 3.10 because netcdf4 has already dropped it
+  skip: win or match(python, "<3.11")
 
 requirements:
   build:
