@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 3.15.2
+  version: 3.15.3
 
 package:
   name: cmor
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/PCMDI/cmor/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 1bb4a80b27710dd9b72f1cdae671e22f2db6631526feadb3d87a6e30e613fd32
+  sha256: 593ca1375932402dd6c9fd51ba58f56762ae1260021419da133a48cf7ff28f09
 
 build:
-  number: 1
+  number: 0
   # we have to drop python 3.10 because netcdf4 has already dropped it
   skip: win or match(python, "<3.11")
 
